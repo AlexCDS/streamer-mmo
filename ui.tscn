@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ui.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ip" type="TextEdit" parent="."]
+margin_left = 512.0
+margin_top = 276.0
+margin_right = 592.0
+margin_bottom = 303.0
+text = "127.0.0.1"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 426.0
+margin_top = 282.0
+margin_right = 510.0
+margin_bottom = 301.0
+text = "Ip address:"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 513.0
+margin_top = 307.0
+margin_right = 592.0
+margin_bottom = 327.0
+text = "Connect"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="Button" to="." method="_on_Button_button_up"]
